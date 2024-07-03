@@ -26,6 +26,12 @@ def traffic_thailand():
     r = palm.chat(**model, messages=q)
     return(render_template("traffic_thailand.html",r=r.last))
 
+@app.route("/traffic_singapore", methods=["GET","POST"])
+def traffic_singapore():
+    q = "singapore traffic"
+    r = palm.chat(**model, messages=q)
+    return(render_template("traffic_singapore.html",r=r.last))
+
 if __name__ == "__main__":
 
     app.run()
